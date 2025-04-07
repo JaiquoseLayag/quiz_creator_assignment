@@ -8,4 +8,8 @@ while True:
     choice_d = input("Enter the answer as choice d: ")
     
     correct_answer = input("Enter which of the choices is the correct answer: ").lower()
+    
+# Validate the correct answer
+    while correct_answer not in ["a", "b", "c", "d"]:
+        correct_answer = input("Please enter a valid and correct answer: ").lower()
 # Loop until the user wants to exit the program
