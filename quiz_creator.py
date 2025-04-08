@@ -23,3 +23,7 @@ while True:
         file.write("d: " + choice_d + "\n")
         file.write("Correct Answer: " + correct_answer + "\n")
         file.write("     \n\n")
+        
+        additional_questions = input("Do you want to add more questions?: ").lower()
+        if additional_questions == "no":
+            break
