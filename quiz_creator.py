@@ -13,3 +13,13 @@ while True:
     while correct_answer not in ["a", "b", "c", "d"]:
         correct_answer = input("Please enter a valid and correct answer: ").lower()
 # Loop until the user wants to exit the program
+# Append and save questions and answers to a file 
+# Break loop if user wants to exit
+    with open("questions_for_quiz.txt", "a") as file:
+        file.write("Question: " + question + "\n")
+        file.write("a: " + choice_a + "\n")
+        file.write("b: " + choice_b + "\n")
+        file.write("c: " + choice_c + "\n")
+        file.write("d: " + choice_d + "\n")
+        file.write("Correct Answer: " + correct_answer + "\n")
+        file.write("     \n\n")
