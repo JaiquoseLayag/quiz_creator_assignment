@@ -34,6 +34,10 @@ while True:
         file.write("Correct Answer: " + correct_answer + "\n")
         file.write("     \n\n")
         
+    question_number = question_number + 1
+        
         additional_questions = input("Do you want to add more questions?: ").lower()
         if additional_questions == "no":
             break
+        
+print(Fore.GREEN + "\nYou created " + str(question_number - 1) + " question(s) overall.")
