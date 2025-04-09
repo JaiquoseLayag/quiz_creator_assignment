@@ -8,6 +8,7 @@ print(Fore.YELLOW + banner)
 question_number = 1
 # Ask the user a question
 while True:
+    print(Fore.CYAN + "\nCreating Question number" + str(question_number))
     question = input("Enter a question: ")
 # Ask the user for an answer and the correct answer
     choice_a = input("Enter the answer as choice a: ")
@@ -24,6 +25,7 @@ while True:
 # Append and save questions and answers to a file 
 # Break loop if user wants to exit
     with open("questions_for_quiz.txt", "a") as file:
+        file.write("Question " + str(question_number) + ": " + question + "\n")
         file.write("Question: " + question + "\n")
         file.write("a: " + choice_a + "\n")
         file.write("b: " + choice_b + "\n")
