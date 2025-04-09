@@ -1,7 +1,9 @@
 import pyfiglet
+from colorama import Fore, Style, init
+init(autoreset=True)
 
 banner = pyfiglet.figlet_format("QUIZ CREATOR")
-print(banner)
+print(Fore.YELLOW + banner)
 # Ask the user a question
 while True:
     question = input("Enter a question: ")
