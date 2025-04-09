@@ -4,6 +4,8 @@ init(autoreset=True)
 
 banner = pyfiglet.figlet_format("QUIZ CREATOR")
 print(Fore.YELLOW + banner)
+
+question_number = 1
 # Ask the user a question
 while True:
     question = input("Enter a question: ")
