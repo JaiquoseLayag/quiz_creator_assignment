@@ -27,5 +27,19 @@ for block in question_blocks:
 # Shuffle the questions to randomize the order
 random.shuffle(questions)
 # Loop through questions and ask for the user's answers
+score = 0
+total = len(questions)
+
+for question_index, question_data in enumerate(questions, start=1):
+    print(f"\nQuestion {question_index}: {question_data['question']}")
+    print("a:", question_data['choices']['a'])
+    print("b:", question_data['choices']['b'])
+    print("c:", question_data['choices']['c'])
+    print("d:", question_data['choices']['d'])
+
+    answer = input("Your answer (a/b/c/d): ").lower()
+    
+    while answer not in ['a', 'b', 'c', 'd']:
+        answer = input("Invalid. Please type a, b, c, or d: ").lower()
 # Validate if answers are correct
 # Show the final score
