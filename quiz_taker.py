@@ -1,3 +1,4 @@
+import random
 # Open and read the file
 with open("questions_for_quiz.txt", "r") as file:
     content = file.read().strip()
@@ -23,8 +24,8 @@ for block in question_blocks:
     }
 
     questions.append(question_data)
-
 # Shuffle the questions to randomize the order
+random.shuffle(questions)
 # Loop through questions and ask for the user's answers
 # Validate if answers are correct
 # Show the final score
