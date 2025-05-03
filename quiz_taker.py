@@ -43,8 +43,11 @@ for question_index, question_data in enumerate(questions, start=1):
         answer = input("Invalid. Please type a, b, c, or d: ").lower()
 # Validate if answers are correct
         if answer == question_data['correct']:
-        print("Correct!")
-        score += 1
+            print("Correct!")
+            score += 1
     else:
         print(f"Wrong. Correct answer is {question_data['correct']}")
 # Show the final score
+print(f"\nYour final score: {score}/{total}")
+percent = (score / total) * 100
+print(f"That's {percent:.2f}% correct!")
