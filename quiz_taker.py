@@ -1,4 +1,10 @@
 import random
+import pyfiglet
+from colorama import Fore, Style, init
+init(autoreset=True)
+
+banner = pyfiglet.figlet_format("QUIZ TIME")
+print(Fore.CYAN + banner)
 # Open and read the file
 with open("questions_for_quiz.txt", "r") as file:
     content = file.read().strip()
