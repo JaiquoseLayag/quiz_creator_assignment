@@ -17,15 +17,15 @@ for block in question_blocks:
     lines = block.strip().split("\n")
     
     question_line = lines[1].replace("Question: ", "").strip()
-    a = lines[2][3:].strip()
-    b = lines[3][3:].strip()
-    c = lines[4][3:].strip()
-    d = lines[5][3:].strip()
+    choice_a = lines[2][3:].strip()
+    choice_b = lines[3][3:].strip()
+    choice_c = lines[4][3:].strip()
+    choice_d = lines[5][3:].strip()
     correct = lines[6].split(":")[1].strip().lower()
 
     question_data = {
         'question': question_line,
-        'choices': {'a': a, 'b': b, 'c': c, 'd': d},
+        'choices': {'a': choice_a, 'b': choice_b, 'c': choice_c, 'd': choice_d},
         'correct': correct
     }
 
@@ -48,7 +48,7 @@ for question_index, question_data in enumerate(questions, start=1):
     while answer not in ['a', 'b', 'c', 'd']:
         answer = input("Invalid. Please type a, b, c, or d: ").lower()
 # Validate if answers are correct
-        if answer == question_data['correct']:
+    if answer == question_data['correct']:
             print("Correct!")
             score += 1
     else:
